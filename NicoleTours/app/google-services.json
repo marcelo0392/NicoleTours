@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "244227080482",
+    "project_id": "nicoletours-7ab4a",
+    "storage_bucket": "nicoletours-7ab4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244227080482:android:6362f5f9496bebfef1257b",
+        "android_client_info": {
+          "package_name": "com.example.nicoletours"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244227080482-js5m7c8lk9fhrn7gg461rubji8oqib2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nicoletours",
+            "certificate_hash": "ffb63a6ebfeb6c2baef48e8a25837df243ecfb5d"
+          }
+        },
+        {
+          "client_id": "244227080482-uutnoqandntc2s23udh8rugdagfvp0re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmVg7_i0cap7MD_lLuUtwmIp37uKUWETQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244227080482-uutnoqandntc2s23udh8rugdagfvp0re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
