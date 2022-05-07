@@ -10,9 +10,11 @@ import android.widget.ListAdapter
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.example.nicoletours.data.model.LocationModel
+import com.example.nicoletours.data.network.LocationService
 import com.example.nicoletours.data.provider.LocationProvider
 import com.example.nicoletours.databinding.FragmentQuoteBinding
 import com.example.nicoletours.ui.viewModel.LocationViewModel
+import java.time.LocalDate
 
 class QuoteFragment : Fragment() {
 
@@ -38,14 +40,21 @@ class QuoteFragment : Fragment() {
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
 //            binding.textView1.text = "Fragmento " + getInt(ARG_OBJECT).toString()
 
+
+
+
+//            locationViewModel.onCreate()
+
+
             var lista:ArrayList<String> = ArrayList()
             locationViewModel.locationModel.observe(viewLifecycleOwner, Observer {
                 it.forEach{
                     lista.add(it.location)
+                    binding.txtRes.text = "hola mundo"
                 }
             })
 
-            locationViewModel.postLocation()
+//            locationViewModel.postLocation()
 
 //            var destinos:ArrayList<String> = ArrayList()
 //            LocationProvider.getLocation().forEach {
@@ -55,6 +64,12 @@ class QuoteFragment : Fragment() {
             var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, lista)
             binding.completeDestino.threshold = 0
             binding.completeDestino.setAdapter(adapter)
+
+//            binding.txtRes.text = "hola mundo"
+        }
+
+        binding.btnCotizar.setOnClickListener {
+            locationViewModel.postLocation()
         }
     }
 }

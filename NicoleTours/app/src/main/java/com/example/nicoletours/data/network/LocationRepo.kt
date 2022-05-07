@@ -5,5 +5,5 @@ import retrofit2.Response
 
 interface LocationRepo {
 
-    suspend fun getAllLocations():Response<List<LocationModel>>
+    suspend fun getAllLocations():List<LocationModel>
 }

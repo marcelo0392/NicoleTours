@@ -4,8 +4,11 @@ import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import androidx.activity.viewModels
+import androidx.fragment.app.activityViewModels
 import com.example.nicoletours.ViewPageFragmentAdapter
 import com.example.nicoletours.databinding.ActivityQuoteBinding
+import com.example.nicoletours.ui.viewModel.LocationViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 
 class QuoteActivity : AppCompatActivity() {
@@ -13,11 +16,14 @@ class QuoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuoteBinding
     private val adapter by lazy { ViewPageFragmentAdapter(this) }
 
+    private val locationViewModel: LocationViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        locationViewModel.onCreate()
         fragmentAdapter()
 
     }
