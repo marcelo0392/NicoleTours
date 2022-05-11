@@ -6,15 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import com.example.nicoletours.data.model.LocationModel
-import com.example.nicoletours.data.network.LocationService
-import com.example.nicoletours.data.provider.LocationProvider
 import com.example.nicoletours.databinding.FragmentQuoteBinding
 import com.example.nicoletours.ui.viewModel.LocationViewModel
-import java.time.LocalDate
 
 class QuoteFragment : Fragment() {
 
@@ -40,36 +35,45 @@ class QuoteFragment : Fragment() {
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
 //            binding.textView1.text = "Fragmento " + getInt(ARG_OBJECT).toString()
 
-
-
-
-//            locationViewModel.onCreate()
-
-
             var lista:ArrayList<String> = ArrayList()
-            locationViewModel.locationModel.observe(viewLifecycleOwner, Observer {
+            locationViewModel.getValue().observe(viewLifecycleOwner, Observer {
                 it.forEach{
                     lista.add(it.location)
                     binding.txtRes.text = "hola mundo"
                 }
             })
 
-//            locationViewModel.postLocation()
-
-//            var destinos:ArrayList<String> = ArrayList()
-//            LocationProvider.getLocation().forEach {
-//                destinos.add(it.location)
-//            }
-
-            var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, lista)
-            binding.completeDestino.threshold = 0
-            binding.completeDestino.setAdapter(adapter)
-
-//            binding.txtRes.text = "hola mundo"
+            location(view, lista)
+            vehicles(view)
+            persons(view)
+            days(view)
         }
+    }
 
-        binding.btnCotizar.setOnClickListener {
-            locationViewModel.postLocation()
-        }
+    private fun persons(view: View) {
+        val list = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+        var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, list)
+        binding.completePasajeros.threshold = 0
+        binding.completePasajeros.setAdapter(adapter)
+    }
+
+    private fun location(view: View, lista:ArrayList<String>) {
+        var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, lista)
+        binding.completeDestino.threshold = 0
+        binding.completeDestino.setAdapter(adapter)
+    }
+
+    private fun vehicles(view: View) {
+        val list = listOf<String>("Surubi", "Trufi", "Vagoneta", "Flota")
+        var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, list)
+        binding.completeVehiculo.threshold = 0
+        binding.completeVehiculo.setAdapter(adapter)
+    }
+
+    private fun days(view: View){
+        val list = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+        var adapter = ArrayAdapter(view.context, android.R.layout.simple_list_item_1, list)
+        binding.completeDias.threshold = 0
+        binding.completeDias.setAdapter(adapter)
     }
 }
