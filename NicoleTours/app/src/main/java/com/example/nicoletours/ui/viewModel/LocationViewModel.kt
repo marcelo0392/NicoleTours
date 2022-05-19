@@ -1,13 +1,10 @@
 package com.example.nicoletours.ui.viewModel
 
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.nicoletours.data.model.LocationModel
-import com.example.nicoletours.data.provider.LocationProvider
 import com.example.nicoletours.domain.GetLocationUseCase
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class LocationViewModel:ViewModel() {

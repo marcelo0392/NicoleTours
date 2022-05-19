@@ -27,7 +27,7 @@ class QuoteDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
-            binding.textView2.text = "Fragmento " + getInt(ARG_OBJECT).toString()
+//            binding.textView2.text = "Fragmento " + getInt(ARG_OBJECT).toString()
         }
     }
 }

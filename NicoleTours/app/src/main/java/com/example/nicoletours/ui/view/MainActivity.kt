@@ -3,8 +3,10 @@ package com.example.nicoletours.ui.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.nicoletours.R
 import com.example.nicoletours.data.model.LocationModel
 import com.example.nicoletours.databinding.ActivityMainBinding
+import com.example.nicoletours.ui.view.fragment.ListVehicleFragment
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -15,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
-    val db = Firebase.firestore
+//    val db = Firebase.firestore
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +30,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        binding.cardList.setOnClickListener {
+            val i = Intent(this, ListVehicleActivity::class.java)
+            startActivity(i)
+//            val fragment = ListVehicleFragment()
+//                val fragmentTransaction = supportFragmentManager.beginTransaction()
+//                fragmentTransaction.add(R.id.fragment1, fragment)
+//                fragmentTransaction.commit()
+        }
 
-        var m = ""
+
+//        var m = ""
 //        val docRef = db.collection("destinos")
 //        docRef.get().addOnCompleteListener {task->
 //            val document = task.result

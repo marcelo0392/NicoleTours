@@ -16,13 +16,15 @@ class LocationService:LocationRepo {
         return  withContext(Dispatchers.IO) {
             val list = ArrayList<LocationModel>()
 //            async {
-                db.collection("destinos").addSnapshotListener{ snapshot, firebaseError->
-
-                    if(firebaseError != null){
+                val docref = db.collection("destinos")
+                    docref.addSnapshotListener{snapshot, e ->
+                    if(e != null){
                         return@addSnapshotListener
                     }
-                    for(doc in snapshot!!){
-                        list.add(doc.toObject<LocationModel>())
+                    if(snapshot != null){
+                        for(doc in snapshot!!) {
+                            list.add(doc.toObject<LocationModel>())
+                    }
                     }
                 }
 //            }.await()
