@@ -6,6 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:background="@drawable/corner_radius"-->
+<!--        android:elevation="2dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:menu="@menu/item_menu_quote" />-->
+
     <ImageView
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
@@ -56,9 +69,41 @@
         </androidx.viewpager2.widget.ViewPager2>
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:fab_expandDirection="down"
+        app:fab_addButtonColorNormal="#009688"
+        android:src="@drawable/ic_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_home"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_car"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_pdf"
+            app:fab_size="mini" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

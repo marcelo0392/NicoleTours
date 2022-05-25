@@ -1,6 +1,7 @@
 package com.example.nicoletours.ui.view
 
 import android.R
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -25,6 +26,11 @@ class QuoteActivity : AppCompatActivity() {
 
         locationViewModel.onCreate()
         fragmentAdapter()
+
+        binding.buttonList.setOnClickListener {
+            val i = Intent(this, ListVehicleActivity::class.java)
+            startActivity(i)
+        }
 
     }
 

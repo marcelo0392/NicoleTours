@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 class VehicleViewModel:ViewModel() {
 
     private val vehicleModel = MutableLiveData<List<VehicleModel>>()
+    private val vehicleSelect = MutableLiveData<VehicleModel>()
 
     var getVehicleUseCase = GetVehicleUseCase()
     lateinit var result:List<VehicleModel>
@@ -31,5 +32,12 @@ class VehicleViewModel:ViewModel() {
     }
     fun postVehicle(result:List<VehicleModel>){
         vehicleModel.postValue(result)
+    }
+
+    fun postVehicleSelect(result:VehicleModel){
+        vehicleSelect.postValue(result)
+    }
+    fun getSelectedValue():MutableLiveData<VehicleModel>{
+        return vehicleSelect
     }
 }

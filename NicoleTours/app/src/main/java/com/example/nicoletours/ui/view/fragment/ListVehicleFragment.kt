@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.databinding.FragmentListVehicleBinding
 import com.example.nicoletours.ui.RecyclerAdapter
+import com.example.nicoletours.ui.viewModel.LocationViewModel
 import com.example.nicoletours.ui.viewModel.VehicleViewModel
 
-class ListVehicleFragment : Fragment() {
+class ListVehicleFragment() : Fragment() {
 
+//    val ve = vehicle
     private var _binding:FragmentListVehicleBinding?=null
     private val binding get() = _binding!!
 
@@ -31,17 +33,18 @@ class ListVehicleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var lista:ArrayList<VehicleModel> = ArrayList()
-        vehicleViewModel.getValue().observe(viewLifecycleOwner, Observer {
-            it.forEach{
-                lista.add(it)
-            }
-            initRecycler(lista)
+        vehicleViewModel.getSelectedValue().observe(this, Observer {
+            binding.tvHolaMundo.text = it.type
         })
-    }
 
-    private fun initRecycler(list: List<VehicleModel>) {
-        binding.rvVehicle.layoutManager = LinearLayoutManager(context)
-        binding.rvVehicle.adapter = RecyclerAdapter(list)
+        binding.btnCerrar.setOnClickListener {
+//            val fragment = ListVehicleFragment()
+//            if (fragmentTransaction != null) {
+//            val fragmentTransaction = fragmentManager.beginTransaction()
+//
+//                fragmentTransaction.remove(fragment)
+//                fragmentTransaction.commit()
+//            }
+        }
     }
 }

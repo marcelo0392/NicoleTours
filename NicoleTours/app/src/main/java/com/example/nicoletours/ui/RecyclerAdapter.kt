@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nicoletours.R
 import com.example.nicoletours.data.model.VehicleModel
 
-class RecyclerAdapter(private val vehicleList:List<VehicleModel>):RecyclerView.Adapter<RecyclerViewHolder>() {
+class RecyclerAdapter(private val vehicleList:List<VehicleModel>, private val onClickListener:(VehicleModel)->Unit):RecyclerView.Adapter<RecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
 
@@ -16,7 +16,7 @@ class RecyclerAdapter(private val vehicleList:List<VehicleModel>):RecyclerView.A
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val item =vehicleList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int = vehicleList.size

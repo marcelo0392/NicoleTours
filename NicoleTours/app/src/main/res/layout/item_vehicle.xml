@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
-    android:layout_marginTop="10dp"
-    app:cardElevation="5dp">
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,9 +18,6 @@
             android:id="@+id/imgVehicle"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp"
             android:background="#1C1C1C"
             android:scaleType="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,20 +39,42 @@
             android:id="@+id/tvAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
             android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:text="Año:"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgVehicle"
             app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Nº Asientos:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgVehicle"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/tvSeating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="9dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/imgVehicle"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/tvAge" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
