@@ -12,13 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NicoleTours">
         <activity
+            android:name=".ui.view.VehicleDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_vehicle_detail"
+            android:theme="@style/Theme.NicoleTours.NoActionBar" />
+        <activity
             android:name=".ui.view.ListVehicleActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.view.QuoteActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.view.MainActivity"
             android:exported="true"

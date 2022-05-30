@@ -77,7 +77,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:fab_expandDirection="down"
-        app:fab_addButtonColorNormal="#009688"
+        app:fab_addButtonColorNormal="#83B886"
         android:src="@drawable/ic_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -87,12 +87,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_icon="@drawable/ic_home"
+            app:fab_colorNormal="#83B886"
             app:fab_size="mini" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/buttonList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fab_colorNormal="#83B886"
             app:fab_icon="@drawable/ic_car"
             app:fab_size="mini" />
 
@@ -100,6 +102,7 @@
             android:id="@+id/buttonPdf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fab_colorNormal="#83B886"
             app:fab_icon="@drawable/ic_pdf"
             app:fab_size="mini" />
 

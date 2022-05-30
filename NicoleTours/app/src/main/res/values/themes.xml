@@ -21,4 +21,13 @@
     <style name="BackgroundCard" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="backgroundColor">@color/cardDark</item>
     </style>
+
+    <style name="Theme.NicoleTours.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NicoleTours.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.NicoleTours.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

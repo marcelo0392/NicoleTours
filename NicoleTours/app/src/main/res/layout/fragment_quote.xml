@@ -85,7 +85,7 @@
     <Button
 
         android:id="@+id/btnCotizar"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="#2196F3"
         android:layout_width="146dp"
         android:layout_height="55dp"
         android:layout_marginTop="30dp"

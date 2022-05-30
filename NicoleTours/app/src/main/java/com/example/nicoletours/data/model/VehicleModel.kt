@@ -1,6 +1,7 @@
 package com.example.nicoletours.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class VehicleModel(
                     @SerializedName("plaque") val plaque:String="",
@@ -9,4 +10,4 @@ data class VehicleModel(
                     @SerializedName("seating") val seating:Int=0,
                     @SerializedName("type") val type:String="",
                     @SerializedName("image") val image:String=""
-                    )
+                    ) : Serializable

@@ -9,11 +9,13 @@
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/drawable/item_menu_quote.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/activity_list_vehicle.xml" value="0.22" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/activity_quote.xml" value="0.25" />
+        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/activity_quote.xml" value="0.33" />
+        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/activity_vehicle_detail.xml" value="0.25" />
+        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/fragment_detail_vehicle.xml" value="0.25" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/fragment_list_vehicle.xml" value="0.25" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/fragment_quote.xml" value="0.25" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/fragment_quote_detail.xml" value="0.25" />
-        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/item_vehicle.xml" value="0.5" />
+        <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/layout/item_vehicle.xml" value="0.33" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours con Git/NicoleTours/app/src/main/res/menu/item_menu_quote.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours/app/src/main/res/layout/activity_quote.xml" value="0.1" />
         <entry key="..\:/Users/marcelo/Desktop/NicoleTours/app/src/main/res/layout/fragment_quote.xml" value="0.1" />
