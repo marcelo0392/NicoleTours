@@ -10,6 +10,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
+import com.example.nicoletours.R
+import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.databinding.FragmentDetailVehicleBinding
 import com.example.nicoletours.ui.viewModel.VehicleViewModel
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
@@ -35,29 +37,34 @@ class DetailVehicleFragment() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         vehicleViewModel.getSelectedValue().observe(this, Observer {
+            val listaString = ArrayList<String>()
+            listaString.add(it.image1)
+            listaString.add(it.image2)
+//            listaString.add(it.image3)
+
             val list = mutableListOf<CarouselItem>()
             val carousel:ImageCarousel = binding.carousel
-            list.add(
-                CarouselItem(
-                    imageUrl = it.image
-                )
-            )
+            list.add(CarouselItem(imageUrl = it.image1))
+            list.add(CarouselItem(imageUrl = it.image2))
+//            list.add(CarouselItem(imageUrl = it.image3))
 
             carousel.setData(list)
-            binding.tvType.text = it.type
-            binding.tvAge.text = it.age.toString()
-            binding.tvModel.text = it.model
-            binding.tvPlaque.text = it.plaque
-            binding.tvSeating.text = it.seating.toString()
+            loadData(it)
 
             carousel.carouselListener = object : CarouselListener {
                 override fun onClick(position: Int, carouselItem: CarouselItem) {
-//                    binding.imgVehicle.isVisible = true
-//                    Glide.with(binding.imgVehicle.context).load(carouselItem.imageUrl).into(binding.imgVehicle)
+                    vehicleViewModel.postImageSelect(listaString)
                     binding.tvMark.text = carouselItem.imageUrl
                 }
             }
         })
+    }
 
+    private fun loadData(it:VehicleModel) {
+//        binding.tvType.text = it.type
+        binding.tvAge.text = it.age.toString()
+//        binding.tvModel.text = "Modelo "+it.model
+        binding.tvPlaque.text = it.plaque
+        binding.tvSeating.text = it.capacity.toString()
     }
 }

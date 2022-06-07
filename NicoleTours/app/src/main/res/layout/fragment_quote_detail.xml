@@ -7,56 +7,23 @@
     tools:context=".ui.view.fragment.QuoteDetailFragment">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="Vehiculo seleccionado: Micro con un costo de 5000Bs"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="139dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="139dp"
-                android:text="VILLA TUNARI"
-                android:textColor="@color/teal_700"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="10dp"
-                android:text="Costo basico por persona de 80Bs"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
-                android:layout_width="413dp"
-                android:layout_height="177dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
@@ -87,19 +54,19 @@
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="5dp"
                     android:text="Total por persona:"
                     android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView15" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="GASTOS EXTRA"
+                    android:text="INCLUYE"
                     android:textColor="@color/teal_700"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -155,30 +122,28 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="16dp"
                     android:text="30Bs"
                     android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView16" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
                 android:layout_width="0dp"
-                android:layout_height="136dp"
-                android:layout_marginTop="17dp"
+                android:layout_height="110dp"
                 android:background="#FFFFFF"
                 android:backgroundTint="#F1F1F1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
                     android:text="Almuerzo"
                     android:textSize="16sp"
@@ -190,7 +155,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="16dp"
                     android:text="Desayuno"
                     android:textSize="16sp"
@@ -228,13 +193,13 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
                     android:text="Cena"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -285,22 +250,22 @@
                     app:layout_constraintEnd_toEndOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-
-                android:id="@+id/btnCotizar"
-                android:layout_width="146dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-
-                android:backgroundTint="@color/teal_700"
-                android:text="COTIZAR"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:cornerRadius="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <Button
+
+        android:id="@+id/btnCotizar"
+        android:layout_width="146dp"
+        android:layout_height="55dp"
+
+        android:backgroundTint="@color/teal_700"
+        android:text="COTIZAR"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

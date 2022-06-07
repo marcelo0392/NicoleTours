@@ -13,6 +13,7 @@ class VehicleViewModel:ViewModel() {
 
     private val vehicleModel = MutableLiveData<List<VehicleModel>>()
     private val vehicleSelect = MutableLiveData<VehicleModel>()
+    private val imageSelect = MutableLiveData<ArrayList<String>>()
 
     var getVehicleUseCase = GetVehicleUseCase()
     lateinit var result:List<VehicleModel>
@@ -39,5 +40,12 @@ class VehicleViewModel:ViewModel() {
     }
     fun getSelectedValue():MutableLiveData<VehicleModel>{
         return vehicleSelect
+    }
+
+    fun postImageSelect(result:ArrayList<String>){
+        imageSelect.postValue(result)
+    }
+    fun getImageSelectedValue():MutableLiveData<ArrayList<String>>{
+        return imageSelect
     }
 }
