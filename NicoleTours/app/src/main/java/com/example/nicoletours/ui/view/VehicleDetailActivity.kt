@@ -26,18 +26,14 @@ class VehicleDetailActivity() : AppCompatActivity() {
 
         val vehicle = intent.getSerializableExtra("vehicle") as VehicleModel
 
-//        Toast.makeText(this, vehicle.type, Toast.LENGTH_LONG).show()
         callFragmentDetall(fragment)
         vehicleViewModel.postVehicleSelect(vehicle)
 
         vehicleViewModel.getImageSelectedValue().observe(this, Observer {
-//            Toast.makeText(this, vehicle.image, Toast.LENGTH_LONG).show()
             val fragmento = supportFragmentManager.findFragmentById(R.id.fragmentDetail)!!
-            if(fragmento != null) {
-                removeFragment(fragmento)
-                fragment = ImagesFragment()
-                callFragmentImage(fragment, it)
-            }
+            removeFragment(fragmento)
+            fragment = ImagesFragment()
+            callFragmentImage(fragment, it)
         })
     }
 
@@ -49,7 +45,6 @@ class VehicleDetailActivity() : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putStringArrayList("key", listImg)
         fragment.arguments = bundle
-
         fragmentTransactio.commit()
     }
 
@@ -62,7 +57,6 @@ class VehicleDetailActivity() : AppCompatActivity() {
     private fun callFragmentDetall(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.fragmentDetail, fragment)
-
         fragmentTransaction.commit()
     }
 
@@ -76,6 +70,5 @@ class VehicleDetailActivity() : AppCompatActivity() {
         }else {
             super.onBackPressed()
         }
-
     }
 }

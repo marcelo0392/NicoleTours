@@ -16,9 +16,8 @@ import com.example.nicoletours.ui.viewModel.VehicleViewModel
 
 open class ListVehicleActivity : AppCompatActivity() {
 
-
-    private lateinit var binding:ActivityListVehicleBinding
-    private val vehicleViewModel:VehicleViewModel by viewModels()
+    private lateinit var binding: ActivityListVehicleBinding
+    private val vehicleViewModel: VehicleViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,14 +25,13 @@ open class ListVehicleActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         vehicleViewModel.onCreate()
-
         getData()
     }
 
     private fun getData() {
-        var lista:ArrayList<VehicleModel> = ArrayList()
+        val lista: ArrayList<VehicleModel> = ArrayList()
         vehicleViewModel.getValue().observe(this, Observer {
-            it.forEach{
+            it.forEach {
                 lista.add(it)
             }
             initRecycler(lista)
@@ -45,34 +43,13 @@ open class ListVehicleActivity : AppCompatActivity() {
         binding.rvVehicle.adapter = RecyclerAdapter(list) { onItemSelected(it) }
     }
 
-    private fun onItemSelected(vehicle:VehicleModel){
-
+    private fun onItemSelected(vehicle: VehicleModel) {
         val i = Intent(this, VehicleDetailActivity()::class.java)
-
-        var bundle = Bundle()
+        val bundle = Bundle()
         bundle.putSerializable("vehicle", vehicle)
         i.putExtras(bundle)
         startActivity(i)
 
-//        val fragment = DetailVehicleFragment()
-//        val fragmentTransaction = supportFragmentManager.beginTransaction()
-//        fragmentTransaction.add(R.id.fragment1, fragment)
-//        fragmentTransaction.commit()
-
         vehicleViewModel.postVehicleSelect(vehicle)
-//        Toast.makeText(this, vehicle.model, Toast.LENGTH_LONG).show()
     }
-
-//    override fun onBackPressed() {
-//
-//        val fragment = supportFragmentManager.findFragmentById(R.id.fragment1)
-//        if(fragment != null) {
-//            val fragmentTransaction = supportFragmentManager.beginTransaction()
-//            fragmentTransaction.remove(fragment)
-//            fragmentTransaction.commit()
-//        }else{
-//            Toast.makeText(this, "Saliendo", Toast.LENGTH_LONG).show()
-//            super.onBackPressed()
-//        }
-//    }
 }

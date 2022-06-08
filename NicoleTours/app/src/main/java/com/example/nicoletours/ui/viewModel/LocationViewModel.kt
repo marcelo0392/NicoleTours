@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 class LocationViewModel:ViewModel() {
 
     private val locationModel = MutableLiveData<List<LocationModel>>()
+    private val locationSelected = MutableLiveData<String>()
 
     var getLocationUseCase = GetLocationUseCase()
     lateinit var result:List<LocationModel>
@@ -29,5 +30,12 @@ class LocationViewModel:ViewModel() {
     }
     fun postLocation(result:List<LocationModel>){
         locationModel.postValue(result)
+    }
+
+    fun getLocationSelected():MutableLiveData<String>{
+        return locationSelected
+    }
+    fun postLocationSelected(result:String){
+        locationSelected.postValue(result)
     }
 }

@@ -4,9 +4,7 @@ import android.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.activity.viewModels
-import androidx.fragment.app.activityViewModels
 import com.example.nicoletours.ViewPageFragmentAdapter
 import com.example.nicoletours.databinding.ActivityQuoteBinding
 import com.example.nicoletours.ui.viewModel.LocationViewModel
@@ -31,7 +29,6 @@ class QuoteActivity : AppCompatActivity() {
             val i = Intent(this, ListVehicleActivity::class.java)
             startActivity(i)
         }
-
     }
 
     private fun fragmentAdapter() {
