@@ -78,7 +78,6 @@
         android:layout_marginEnd="16dp"
         app:fab_expandDirection="down"
         app:fab_addButtonColorNormal="#83B886"
-        android:src="@drawable/ic_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
-import androidx.core.view.isInvisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.example.nicoletours.data.model.LocationModel
@@ -20,9 +19,9 @@ class QuoteDetailFragment : Fragment() {
 
     private val locationViewModel: LocationViewModel by activityViewModels()
 
-    companion object {
-        private const val ARG_OBJECT = "objeto"
-    }
+//    companion object {
+//        private const val ARG_OBJECT = "objeto"
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,9 +33,9 @@ class QuoteDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
-//            binding.textView2.text = "Fragmento " + getInt(ARG_OBJECT).toString()
-        }
+//        arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
+////            binding.textView2.text = "Fragmento " + getInt(ARG_OBJECT).toString()
+//        }
         val lista:ArrayList<LocationModel> = ArrayList()
         locationViewModel.getValue().observe(viewLifecycleOwner, Observer {
             it.forEach{
@@ -81,20 +80,6 @@ class QuoteDetailFragment : Fragment() {
                     if (it.costAtraction12 != null) binding.tvCost12.text = it.costAtraction12.toString()
                     if (it.costAtraction13 != null) binding.tvCost13.text = it.costAtraction13.toString()
                     if (it.costAtraction14 != null) binding.tvCost14.text = it.costAtraction14.toString()
-
-//                    binding.tvCost2.text = it.costAtraction2.toString()
-//                    binding.tvCost3.text = it.costAtraction3.toString()
-//                    binding.tvCost4.text = it.costAtraction4.toString()
-//                    binding.tvCost5.text = it.costAtraction5.toString()
-//                    binding.tvCost6.text = it.costAtraction6.toString()
-//                    binding.tvCost7.text = it.costAtraction7.toString()
-//                    binding.tvCost8.text = it.costAtraction8.toString()
-//                    binding.tvCost9.text = it.costAtraction9.toString()
-//                    binding.tvCost10.text = it.costAtraction10.toString()
-//                    binding.tvCost11.text = it.costAtraction11.toString()
-//                    binding.tvCost12.text = it.costAtraction12.toString()
-//                    binding.tvCost13.text = it.costAtraction13.toString()
-//                    binding.tvCost14.text = it.costAtraction14.toString()
                 }
             }
         })

@@ -11,7 +11,7 @@ class RecyclerViewHolder(view:View):RecyclerView.ViewHolder(view) {
     val binding = ItemVehicleBinding.bind(view)
 
     fun render(model:VehicleModel, onClickListener:(VehicleModel)->Unit){
-        binding.tvType.text = model.age.toString()
+        binding.tvBrand.text = model.brand.toString()
         binding.tvAge.text = model.age.toString()
         binding.tvSeating.text = model.capacity.toString()
         Glide.with(binding.imgVehicle.context).load(model.image1).into(binding.imgVehicle)

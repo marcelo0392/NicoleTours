@@ -40,13 +40,11 @@ class DetailVehicleFragment() : Fragment() {
             val listaString = ArrayList<String>()
             listaString.add(it.image1)
             listaString.add(it.image2)
-//            listaString.add(it.image3)
 
             val list = mutableListOf<CarouselItem>()
             val carousel:ImageCarousel = binding.carousel
             list.add(CarouselItem(imageUrl = it.image1))
             list.add(CarouselItem(imageUrl = it.image2))
-//            list.add(CarouselItem(imageUrl = it.image3))
 
             carousel.setData(list)
             loadData(it)
@@ -54,17 +52,24 @@ class DetailVehicleFragment() : Fragment() {
             carousel.carouselListener = object : CarouselListener {
                 override fun onClick(position: Int, carouselItem: CarouselItem) {
                     vehicleViewModel.postImageSelect(listaString)
-                    binding.tvMark.text = carouselItem.imageUrl
                 }
             }
         })
     }
 
     private fun loadData(it:VehicleModel) {
-//        binding.tvType.text = it.type
+        binding.tvBrand.text = it.brand
+        binding.tvModel.text = it.model
         binding.tvAge.text = it.age.toString()
-//        binding.tvModel.text = "Modelo "+it.model
         binding.tvPlaque.text = it.plaque
         binding.tvSeating.text = it.capacity.toString()
+        binding.tvHeating.text = it.heating
+        binding.tvCharger.text = it.chargers
+        binding.tvTv.text = it.televisions
+        binding.tvExtinguishers.text = it.extinguishers
+        binding.tvKit.text = it.kit
+        binding.tvRadio.text = it.radio
+        binding.tvSeating.text = it.capacity
+        binding.tvAir.text = it.airConditioning
     }
 }

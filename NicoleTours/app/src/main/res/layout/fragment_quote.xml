@@ -83,7 +83,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-
         android:id="@+id/btnCotizar"
         android:backgroundTint="#2196F3"
         android:layout_width="146dp"
@@ -96,14 +95,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edDias" />
-
-    <TextView
-        android:id="@+id/txtRes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCotizar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

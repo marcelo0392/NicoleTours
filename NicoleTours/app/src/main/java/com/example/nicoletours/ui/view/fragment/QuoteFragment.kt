@@ -20,9 +20,9 @@ class QuoteFragment : Fragment(), AdapterView.OnItemClickListener {
 
     private val locationViewModel:LocationViewModel by activityViewModels()
 
-    companion object {
-        private const val ARG_OBJECT = "objeto"
-    }
+//    companion object {
+//        private const val ARG_OBJECT = "objeto"
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,14 +34,13 @@ class QuoteFragment : Fragment(), AdapterView.OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
+//        arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
 //            binding.textView1.text = "Fragmento " + getInt(ARG_OBJECT).toString()
 
             val lista:ArrayList<String> = ArrayList()
             locationViewModel.getValue().observe(viewLifecycleOwner, Observer {
                 it.forEach{
                     lista.add(it.location.toString())
-                    binding.txtRes.text = it.atraction13 + it.costAtraction13
                 }
             })
 
@@ -49,7 +48,7 @@ class QuoteFragment : Fragment(), AdapterView.OnItemClickListener {
             vehicles(view)
             persons(view)
             days(view)
-        }
+//        }
     }
 
     private fun persons(view: View) {

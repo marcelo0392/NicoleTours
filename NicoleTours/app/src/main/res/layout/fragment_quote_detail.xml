@@ -6,496 +6,503 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.fragment.QuoteDetailFragment">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/constraintLayout4"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="135dp"
+            android:background="#F5F5F5"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:background="#EAE9E9"
-                android:paddingBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <TextView
-                    android:id="@+id/tvCost11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost10"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvAtraction14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction13"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction11"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvCost7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost6"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost4"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvAtraction1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="16dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction2"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="INCLUYE"
-                    android:textColor="#2196F3"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tvAtraction2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction1"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction7"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction6"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction5"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction4"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction3"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvCost1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost1"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost2"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost3"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost5"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost7"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvAtraction9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction8"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction9"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction10"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvAtraction13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="4dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAtraction12"
-                    tools:text="atraction" />
-
-                <TextView
-                    android:id="@+id/tvCost9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost8"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost9"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost11"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost12"
-                    tools:text="cost" />
-
-                <TextView
-                    android:id="@+id/tvCost14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="99dp"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvCost13"
-                    tools:text="cost" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Almuerzo"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textView7"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="10dp"
-                android:text="Desayuno"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="45dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="85dp"
-                android:ems="13"
-                android:gravity="center"
-
-                android:hint="Dias"
-                android:inputType="number"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="45dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="74dp"
-                android:layout_marginTop="4dp"
-                android:ems="13"
-                android:gravity="center"
-                android:hint="Dias"
-                android:inputType="number"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="90dp"
-                android:text="Cena"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="133dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="132dp"
-                android:text="ALIMENTACION"
-                android:textColor="#2196F3"
-                android:textSize="20sp"
-                android:textStyle="bold"
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
-                android:layout_width="45dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="4dp"
-                android:ems="13"
-                android:gravity="center"
-                android:hint="Dias"
-                android:inputType="number"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
-                app:layout_constraintHorizontal_bias="0.56"
-                app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="Total por persona:"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toTopOf="@+id/textView10" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:text="30Bs" />
+                    <TextView
+                        android:id="@+id/tvCost11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost10"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction13"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction11"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvCost7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost6"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost4"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction2"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="INCLUYE"
+                        android:textColor="#2196F3"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction1"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction7"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction6"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction5"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction4"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction3"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvCost1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost1"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost2"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost3"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost5"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost7"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction8"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction9"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction10"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvAtraction13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAtraction12"
+                        tools:text="atraction" />
+
+                    <TextView
+                        android:id="@+id/tvCost9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost8"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost9"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost11"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost12"
+                        tools:text="cost" />
+
+                    <TextView
+                        android:id="@+id/tvCost14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="100dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCost13"
+                        tools:text="cost" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Almuerzo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:text="Desayuno"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="85dp"
+            android:ems="13"
+            android:gravity="center"
+
+            android:hint="Dias"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="2dp"
+            android:ems="13"
+            android:gravity="center"
+            android:hint="Dias"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="90dp"
+            android:text="Cena"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="132dp"
+            android:text="ALIMENTACION"
+            android:textColor="#2196F3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:ems="13"
+            android:gravity="center"
+            android:hint="Dias"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="Total por persona:"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="30Bs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </ScrollView>-->
 
     <Button
-
         android:id="@+id/btnCotizar"
         android:layout_width="146dp"
         android:layout_height="55dp"
-
         android:backgroundTint="#2196F3"
-        android:text="COTIZAR"
+        android:text="CONFIRMAR"
         android:textSize="14sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

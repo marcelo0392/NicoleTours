@@ -1,5 +1,6 @@
 package com.example.nicoletours.data.model
 
+import com.example.nicoletours.common.*
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
@@ -28,3 +29,29 @@ data class VehicleModel(
                     @SerializedName("image1") val image1:String="",
                     @SerializedName("image2") val image2:String=""
                     ) : Serializable
+
+fun VehicleModel.toMap() = mapOf<String, Any>(
+    DRIVER_NAME to name,
+    DRIVER_CI to ci,
+    DRIVER_CATEGORY to category,
+    DRIVER_RECORD to record,
+    VEHICLE_INSPECTION to inspection,
+    VEHICLE_RUAT to ruat,
+    VEHICLE_SOAT to soat,
+    VEHICLE_AGE to age,
+    VEHICLE_BRAND to brand,
+    VEHICLE_CAPACITY to capacity,
+    VEHICLE_MODEL to model,
+    VEHICLE_PLAQUE to plaque,
+    VEHICLE_AIR to airConditioning,
+    VEHICLE_HEATING to heating,
+    VEHICLE_CHARGERS to chargers,
+    VEHICLE_TV to televisions,
+    VEHICLE_RADIO to radio,
+    VEHICLE_KIT to kit,
+    VEHICLE_EXTINGUISHERS to extinguishers,
+    VEHICLE_RECLINERS to recliners,
+    VEHICLE_SEAT_BELT to seatBelt,
+    VEHICLE_IMAGE1 to image1,
+    VEHICLE_IMAGE2 to image2
+)
