@@ -14,7 +14,6 @@ class QuoteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuoteBinding
     private val adapter by lazy { ViewPageFragmentAdapter(this) }
-
     private val locationViewModel: LocationViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

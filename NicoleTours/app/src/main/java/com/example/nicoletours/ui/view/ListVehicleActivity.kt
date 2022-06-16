@@ -40,6 +40,7 @@ open class ListVehicleActivity : AppCompatActivity() {
 
             binding.appbar.isGone = true
             binding.scroll.isGone = true
+            binding.btnAdd.isGone = true
 
             fragmentNewVehicle = NewVehicleFragment()
             val fragmentTransaction = supportFragmentManager.beginTransaction()
@@ -120,6 +121,7 @@ open class ListVehicleActivity : AppCompatActivity() {
             fragmentNewVehicle = null
             binding.appbar.isGone = false
             binding.scroll.isGone = false
+            binding.btnAdd.isGone = false
         }else {
             super.onBackPressed()
         }

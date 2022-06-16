@@ -43,9 +43,9 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/ic_car_list" />
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_icon_coti" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -81,9 +81,9 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/ic_car_list" />
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_icon_vehicle" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -118,9 +118,9 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/ic_car_list" />
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_icon_edit" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,14 +155,14 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/ic_car_list" />
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_icon_guia" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Añadir"
+                    android:text="Guia"
                     android:textAlignment="center"
                     android:textSize="18dp"
                     android:textStyle="bold" />

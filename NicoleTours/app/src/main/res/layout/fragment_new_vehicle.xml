@@ -42,9 +42,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-
-                android:src="@drawable/ic_listavehiculos"
-                android:scaleType="centerCrop"
+                android:foreground="#372E2EDD"
+                android:src="@drawable/ic_add_image"
+                android:scaleType="matrix"
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
@@ -75,42 +75,62 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edName"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="285dp"
                 android:layout_height="wrap_content"
+                android:hint="Nombre Completo"
                 android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView34">
 
-                <AutoCompleteTextView
-                    android:id="@+id/completeName"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre Completo"
-                    android:inputType="text" />
+                    android:inputType="text"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/edCi"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="285dp"
+                android:id="@+id/edCi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:hint="CI"
+                app:layout_constraintStart_toStartOf="@+id/edName"
+                app:layout_constraintTop_toBottomOf="@+id/edName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputCi"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:inputType="number"/>
 
-                    app:layout_constraintTop_toBottomOf="@+id/edName">
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completeCi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="CI"
-                        android:inputType="number" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edCiDpto"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/edName"
+                app:layout_constraintStart_toEndOf="@+id/edCi"
+                app:layout_constraintTop_toBottomOf="@+id/edName">
+
+                <AutoCompleteTextView
+                    android:id="@+id/completeCiDpto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dpto"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edCategory"
@@ -132,107 +152,138 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edInspection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/edCategory"
+                app:layout_constraintTop_toBottomOf="@+id/edCategory">
+
+                <AutoCompleteTextView
+                    android:id="@+id/completeInspection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Inspeccion"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edInspectionNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Codigo"
+                app:layout_constraintEnd_toEndOf="@+id/edCategory"
+                app:layout_constraintStart_toEndOf="@+id/edInspection"
+                app:layout_constraintTop_toBottomOf="@+id/edCategory">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputInspectionNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edAge"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
+                    android:hint="Modelo de Chasis"
                     app:layout_constraintTop_toBottomOf="@+id/textView35">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completeAge"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Modelo Chasis"
-                        android:inputType="none" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edBrand"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
+                    android:hint="Marca"
                     app:layout_constraintTop_toBottomOf="@+id/edAge">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completeBrand"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputBrand"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Marca"
-                        android:inputType="none" />
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edCapacity"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
+                    android:hint="Capacidad de Pasajeros"
                     app:layout_constraintTop_toBottomOf="@+id/edBrand">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completeCapacity"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputCapacity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Capacidad de Pasajeros"
-                        android:inputType="none" />
+                        android:inputType="number"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edModel"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
+                    android:hint="Modelo"
                     app:layout_constraintTop_toBottomOf="@+id/edCapacity">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completeModel"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputModel"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Modelo"
-                        android:inputType="none" />
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edPlaque"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
+                    android:hint="Placa"
                     app:layout_constraintTop_toBottomOf="@+id/edModel">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/completePlaque"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputPlaque"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Placa"
-                        android:inputType="none" />
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+                android:id="@+id/btnRegister"
                 android:layout_width="146dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="30dp"
@@ -249,38 +300,34 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="14dp"
                 android:text="RUAT"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/cBoxRuat"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="17dp"
-                android:gravity="center"
-                android:text="Inspeccion"
-                android:textSize="16sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/edInspection" />
+
+            <CheckBox
+                android:id="@+id/cBoxRuat"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-4dp"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="5dp"
                 android:text="SOAT"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/cBoxSoat"
-                app:layout_constraintTop_toBottomOf="@+id/edCategory" />
+                app:layout_constraintTop_toBottomOf="@+id/edInspection" />
 
             <CheckBox
                 android:id="@+id/cBoxSoat"
@@ -289,44 +336,28 @@
                 android:layout_marginTop="-4dp"
                 android:layout_marginEnd="70dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textColorLink="#4dabf5"
                 app:layout_constraintTop_toTopOf="@+id/textView12" />
-
-            <CheckBox
-                android:id="@+id/cBoxRuat"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="-4dp"
-                android:layout_marginEnd="70dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-            <CheckBox
-                android:id="@+id/cBoxInspection"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="-4dp"
-                app:layout_constraintStart_toEndOf="@+id/textView9"
-                app:layout_constraintTop_toTopOf="@+id/textView9" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="17dp"
                 android:text="Antecedentes"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edCategory" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <CheckBox
                 android:id="@+id/cBoxRecord"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="-4dp"
+                android:textColorLink="#4dabf5"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toTopOf="@+id/textView13" />
 
@@ -347,15 +378,15 @@
                 android:id="@+id/textView35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:text="Datos Técnicos"
+                android:textColor="#4dabf5"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:textColor="#4dabf5"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintTop_toBottomOf="@+id/cBoxInspection" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cBoxRecord" />
 
             <TextView
                 android:id="@+id/textView36"
@@ -386,15 +417,17 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="-4dp"
+                android:textColorLink="#4dabf5"
                 app:layout_constraintStart_toEndOf="@+id/textView37"
                 app:layout_constraintTop_toTopOf="@+id/textView37" />
 
             <CheckBox
-                android:id="@+id/checkBox3cliners"
+                android:id="@+id/cBoxRecliners"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="-4dp"
+                android:textColorLink="#4dabf5"
                 app:layout_constraintStart_toEndOf="@+id/textView36"
                 app:layout_constraintTop_toTopOf="@+id/textView36" />
 

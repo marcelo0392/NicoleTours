@@ -10,7 +10,9 @@
     <FrameLayout
         android:id="@+id/fragment1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -42,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-
+                android:foreground="#222E2EDD"
                 android:src="@drawable/ic_listavehiculos"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
@@ -90,9 +92,9 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fab_colorNormal="#4dabf5"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
-        />
+        app:fab_colorNormal="#4dabf5"
+        android:src="@drawable/ic_add_vehicle"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -55,6 +56,11 @@ class DetailVehicleFragment() : Fragment() {
                 }
             }
         })
+
+        binding.btnDetail.setOnClickListener {
+            binding.layoutGeneral.isGone = false
+            binding.btnDetail.isGone = true
+        }
     }
 
     private fun loadData(it:VehicleModel) {
@@ -69,7 +75,16 @@ class DetailVehicleFragment() : Fragment() {
         binding.tvExtinguishers.text = it.extinguishers
         binding.tvKit.text = it.kit
         binding.tvRadio.text = it.radio
-        binding.tvSeating.text = it.capacity
+        binding.tvSeating.text = it.capacity.toString() + " Asientos"
         binding.tvAir.text = it.airConditioning
+
+        binding.tvNom.text = it.name
+        binding.tvCi.text = it.ci
+        binding.tvRuat.text = it.ruat
+        binding.tvSoat.text = it.soat
+        binding.tvCategory.text = it.category
+        binding.tvRecord.text = it.record
+        binding.tvInspection.text = it.inspection
+
     }
 }

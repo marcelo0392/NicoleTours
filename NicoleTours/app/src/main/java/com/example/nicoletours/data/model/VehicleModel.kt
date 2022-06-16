@@ -14,7 +14,7 @@ data class VehicleModel(
                     @SerializedName("soat") val soat:String="",
                     @SerializedName("age") val age:Int=0,
                     @SerializedName("brand") val brand:String="",           //marca
-                    @SerializedName("capacity") val capacity:String="",     //capacidad de asientos
+                    @SerializedName("capacity") val capacity:Int=0,     //capacidad de asientos
                     @SerializedName("model") val model:String="",           //modelo
                     @SerializedName("plaque") val plaque:String="",         //Nº placa
                     @SerializedName("airConditioning") val airConditioning:String="",   //aire accondicionado

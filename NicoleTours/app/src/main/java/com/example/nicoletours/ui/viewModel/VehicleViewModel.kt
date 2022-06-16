@@ -7,6 +7,7 @@ import com.example.nicoletours.data.model.LocationModel
 import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.domain.GetLocationUseCase
 import com.example.nicoletours.domain.GetVehicleUseCase
+import com.example.nicoletours.domain.postVehicleUseCase
 import kotlinx.coroutines.launch
 
 class VehicleViewModel:ViewModel() {
@@ -16,6 +17,7 @@ class VehicleViewModel:ViewModel() {
     private val imageSelect = MutableLiveData<ArrayList<String>>()
 
     var getVehicleUseCase = GetVehicleUseCase()
+
     lateinit var result:List<VehicleModel>
 
     fun onCreate() {
@@ -47,5 +49,12 @@ class VehicleViewModel:ViewModel() {
     }
     fun getImageSelectedValue():MutableLiveData<ArrayList<String>>{
         return imageSelect
+    }
+
+    fun postNewVehicle(result: VehicleModel){
+        viewModelScope.launch{
+            postVehicleUseCase().postVehicle(result)
+        }
+
     }
 }
