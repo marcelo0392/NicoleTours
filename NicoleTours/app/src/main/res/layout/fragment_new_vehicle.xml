@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.ListVehicleActivity">
+    tools:context=".ui.view.activity.ListVehicleActivity">
 
     <FrameLayout
         android:id="@+id/fragment1"
@@ -80,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nombre Completo"
                 android:layout_marginTop="5dp"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView34">
@@ -119,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
+
                 app:layout_constraintEnd_toEndOf="@+id/edName"
                 app:layout_constraintStart_toEndOf="@+id/edCi"
                 app:layout_constraintTop_toBottomOf="@+id/edName">
@@ -138,6 +140,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
 
@@ -159,6 +162,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+
                 app:layout_constraintStart_toStartOf="@+id/edCategory"
                 app:layout_constraintTop_toBottomOf="@+id/edCategory">
 
@@ -179,6 +183,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="Codigo"
+
                 app:layout_constraintEnd_toEndOf="@+id/edCategory"
                 app:layout_constraintStart_toEndOf="@+id/edInspection"
                 app:layout_constraintTop_toBottomOf="@+id/edCategory">
@@ -196,6 +201,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:hint="Modelo de Chasis"
@@ -215,6 +221,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:hint="Marca"
@@ -233,6 +240,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:hint="Capacidad de Pasajeros"
@@ -252,6 +260,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:hint="Modelo"
@@ -270,6 +279,7 @@
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:hint="Placa"
@@ -303,6 +313,7 @@
                 android:layout_marginStart="65dp"
                 android:layout_marginTop="14dp"
                 android:text="RUAT"
+
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -314,6 +325,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="-4dp"
+
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toTopOf="@+id/textView3" />
 
@@ -324,6 +336,7 @@
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="5dp"
                 android:text="SOAT"
+
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/cBoxSoat"
@@ -335,6 +348,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="-4dp"
                 android:layout_marginEnd="70dp"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textColorLink="#4dabf5"
                 app:layout_constraintTop_toTopOf="@+id/textView12" />
@@ -346,6 +360,7 @@
                 android:layout_marginStart="108dp"
                 android:layout_marginTop="17dp"
                 android:text="Antecedentes"
+
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -358,6 +373,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="-4dp"
                 android:textColorLink="#4dabf5"
+
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toTopOf="@+id/textView13" />
 
@@ -369,6 +385,7 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="#4dabf5"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
 
@@ -435,15 +452,15 @@
                 android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="20dp"
                 android:text="Complementos"
+                android:textColor="#4dabf5"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:textColor="#4dabf5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+                app:layout_constraintTop_toBottomOf="@+id/btnLoadImage" />
 
             <TextView
                 android:id="@+id/textView40"
@@ -588,6 +605,57 @@
                 android:layout_marginTop="-4dp"
                 app:layout_constraintStart_toEndOf="@+id/textView39"
                 app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Imagenes"
+                android:textColor="#4dabf5"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <ImageView
+                android:id="@+id/imgVehicle1"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_image_load"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <ImageView
+                android:id="@+id/imgVehicle2"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                android:src="@drawable/ic_image_load"/>
+
+            <Button
+                android:id="@+id/btnLoadImage"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Enviar"
+                android:textColor="#4D4F50"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_send"
+                app:iconGravity="textEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgVehicle1"
+                app:strokeColor="#673AB7" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

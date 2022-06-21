@@ -1,6 +1,5 @@
-package com.example.nicoletours.ui.view
+package com.example.nicoletours.ui.view.activity
 
-import android.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

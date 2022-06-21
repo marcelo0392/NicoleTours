@@ -1,4 +1,4 @@
-package com.example.nicoletours.ui.view
+package com.example.nicoletours.ui.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

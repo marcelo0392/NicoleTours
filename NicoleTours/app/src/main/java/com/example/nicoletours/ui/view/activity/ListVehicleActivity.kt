@@ -1,4 +1,4 @@
-package com.example.nicoletours.ui.view
+package com.example.nicoletours.ui.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isGone
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,8 +14,6 @@ import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.data.model.toMap
 import com.example.nicoletours.databinding.ActivityListVehicleBinding
 import com.example.nicoletours.ui.RecyclerAdapter
-import com.example.nicoletours.ui.view.fragment.DetailVehicleFragment
-import com.example.nicoletours.ui.view.fragment.ImagesFragment
 import com.example.nicoletours.ui.view.fragment.NewVehicleFragment
 import com.example.nicoletours.ui.viewModel.VehicleViewModel
 import com.google.firebase.firestore.ktx.firestore

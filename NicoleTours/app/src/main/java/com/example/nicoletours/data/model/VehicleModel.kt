@@ -26,8 +26,8 @@ data class VehicleModel(
                     @SerializedName("extinguishers") val extinguishers:String="",   //extintores
                     @SerializedName("recliners") val recliners:String="",   //asientos reclinables
                     @SerializedName("seatBelt") val seatBelt:String="",     //cinturones de seguridad
-                    @SerializedName("image1") val image1:String="",
-                    @SerializedName("image2") val image2:String=""
+                    @SerializedName("image1") var image1:String="",
+                    @SerializedName("image2") var image2:String=""
                     ) : Serializable
 
 fun VehicleModel.toMap() = mapOf<String, Any>(

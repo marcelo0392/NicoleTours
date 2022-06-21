@@ -1,11 +1,10 @@
 package com.example.nicoletours.ui.viewModel
 
+import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.nicoletours.data.model.LocationModel
 import com.example.nicoletours.data.model.VehicleModel
-import com.example.nicoletours.domain.GetLocationUseCase
 import com.example.nicoletours.domain.GetVehicleUseCase
 import com.example.nicoletours.domain.postVehicleUseCase
 import kotlinx.coroutines.launch
@@ -19,6 +18,7 @@ class VehicleViewModel:ViewModel() {
     var getVehicleUseCase = GetVehicleUseCase()
 
     lateinit var result:List<VehicleModel>
+    lateinit var listImage:List<String>
 
     fun onCreate() {
         viewModelScope.launch {
@@ -51,10 +51,10 @@ class VehicleViewModel:ViewModel() {
         return imageSelect
     }
 
-    fun postNewVehicle(result: VehicleModel){
-        viewModelScope.launch{
-            postVehicleUseCase().postVehicle(result)
+    fun postNewVehicle(result: VehicleModel, img1:Uri, img2:Uri) {
+        viewModelScope.launch {
+            postVehicleUseCase().registerVehicle(result, img1, img2)
         }
-
     }
+
 }

@@ -1,5 +1,11 @@
 package com.example.nicoletours.ui.view.fragment
 
+import android.Manifest
+import android.app.Activity
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -8,16 +14,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.databinding.FragmentNewVehicleBinding
 import com.example.nicoletours.ui.viewModel.VehicleViewModel
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class NewVehicleFragment : Fragment() {
 
     private var _binding: FragmentNewVehicleBinding?=null
     private val binding get() = _binding!!
     private val vehicleViewModel: VehicleViewModel by activityViewModels()
+    private var cImg = 0
+    private var img1:String=""
+    private var img2:String=""
+    private var data1:Uri? = null
+    private var data2:Uri? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,76 +52,111 @@ class NewVehicleFragment : Fragment() {
 
         binding.btnRegister.setOnClickListener {
             val vehicleNew=getData()
-            vehicleViewModel.postNewVehicle(vehicleNew)
-//            createVehicle(vehicleNew)
+            vehicleViewModel.postNewVehicle(vehicleNew, data1!!, data2!!)
+        }
+
+        binding.imgVehicle1.setOnClickListener {
+            requestPermission()
+            cImg = 1
+        }
+
+        binding.imgVehicle2.setOnClickListener {
+            requestPermission()
+            cImg = 2
+        }
+    }
+
+    private fun requestPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            when {
+
+                context?.let {
+                    ContextCompat.checkSelfPermission(
+                        it,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                    )
+                } == PackageManager.PERMISSION_GRANTED -> {
+                    pickPhotoFromGallery()
+                }
+
+                else -> requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+            }
+        }else {
+            pickPhotoFromGallery()
+        }
+    }
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ){ isGranted ->
+
+        if (isGranted){
+            pickPhotoFromGallery()
+        }else{
+            Toast.makeText(
+                context,
+                "Permission denied",
+                Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun pickPhotoFromGallery() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        startForActivityResult.launch(intent)
+    }
+
+    private val startForActivityResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            if(cImg == 1) {
+                data1 = result.data?.data!!
+                binding.imgVehicle1.setImageURI(data1)
+            }
+            if(cImg == 2) {
+                data2 = result.data?.data!!
+                binding.imgVehicle2.setImageURI(data2)
+            }
         }
     }
 
     private fun getData():VehicleModel {
-        val name:String = binding.inputName.text.toString()
-        val inspectionNum:String = binding.inputInspectionNum.text.toString()
-        val brand:String = binding.inputBrand.text.toString()
-        val model:String = binding.inputModel.text.toString()
-        val plaque:String = binding.inputPlaque.text.toString()
         var ci = 0
         if(!TextUtils.isEmpty(binding.inputCi.text.toString())) ci = Integer.parseInt(binding.inputCi.text.toString())
         var age = 0
         if(!TextUtils.isEmpty(binding.inputAge.text.toString())) age = Integer.parseInt(binding.inputAge.text.toString())
         var capacity = 0
         if(!TextUtils.isEmpty(binding.inputCapacity.text.toString())) capacity = Integer.parseInt(binding.inputCapacity.text.toString())
-
-        //complete
         val dpto:String = binding.completeCiDpto.text.toString()
-        val category:String = binding.completeCategory.text.toString()
-        val inspection:String = binding.completeInspection.text.toString()
 
-        //check
-        val record = if(binding.cBoxRecord.isChecked) "SI" else "NO"
-        val ruat = if(binding.cBoxRuat.isChecked) "SI" else "NO"
-        val soat = if(binding.cBoxSoat.isChecked) "SI" else "NO"
-        val air = if(binding.cBoxAir.isChecked) "SI" else "NO"
-        val heating = if(binding.cBoxHeating.isChecked) "SI" else "NO"
-        val chargers = if(binding.cBoxChargers.isChecked) "SI" else "NO"
-        val tv = if(binding.cBoxTv.isChecked) "SI" else "NO"
-        val radio = if(binding.cBoxRadio.isChecked) "SI" else "NO"
-        val kit = if(binding.cBoxKit.isChecked) "SI" else "NO"
-        val extinguishers = if(binding.cBoxExtinguishers.isChecked) "SI" else "NO"
-        val recliners = if(binding.cBoxRecliners.isChecked) "SI" else "NO"
-        val seatBelt = if(binding.cBoxSeatBelt.isChecked) "SI" else "NO"
-
-        Toast.makeText(context, "asd $category", Toast.LENGTH_LONG).show()
-
-        val vehicleNew = VehicleModel(
-            name = name,
-            ci = "$ci $dpto",
-            category = category,
-            record = record,
-            inspection = "$inspection Nº$inspectionNum",
-            ruat = ruat,
-            soat = soat,
+        val vehicle = VehicleModel(
+            name = binding.inputName.text.toString(),
+            ci = "$ci$dpto",
+            category = binding.completeCategory.text.toString(),
+            record = if(binding.cBoxRecord.isChecked) "SI" else "NO",
+            inspection = binding.completeInspection.text.toString() +" Nº" + binding.inputInspectionNum.text.toString(),
+            ruat = if(binding.cBoxRuat.isChecked) "SI" else "NO",
+            soat = if(binding.cBoxSoat.isChecked) "SI" else "NO",
             age = age,
-            brand = brand,
+            brand = binding.inputBrand.text.toString(),
             capacity = capacity,
-            model = model,
-            plaque = plaque,
-            airConditioning = air,
-            heating = heating,
-            chargers = chargers,
-            televisions = tv,
-            radio = radio,
-            kit = kit,
-            extinguishers = extinguishers,
-            recliners = recliners,
-            seatBelt = seatBelt
+            model = binding.inputModel.text.toString(),
+            plaque = binding.inputPlaque.text.toString(),
+            airConditioning = if(binding.cBoxAir.isChecked) "SI" else "NO",
+            heating = if(binding.cBoxHeating.isChecked) "SI" else "NO",
+            chargers = if(binding.cBoxChargers.isChecked) "SI" else "NO",
+            televisions = if(binding.cBoxTv.isChecked) "SI" else "NO",
+            radio = if(binding.cBoxRadio.isChecked) "SI" else "NO",
+            kit = if(binding.cBoxKit.isChecked) "SI" else "NO",
+            extinguishers = if(binding.cBoxExtinguishers.isChecked) "SI" else "NO",
+            recliners = if(binding.cBoxRecliners.isChecked) "SI" else "NO",
+            seatBelt = if(binding.cBoxSeatBelt.isChecked) "SI" else "NO",
+            image1 = img1,
+            image2 = img2
         )
-        return vehicleNew
+        return vehicle
     }
-
-//    private fun createVehicle(vehicle: VehicleModel) {
-//        Firebase.firestore
-//            .collection("Vehicle")
-//            .add(vehicle.toMap())
-//    }
 
     private fun category(view: View) {
         val list = listOf<String>("A", "B", "C")

@@ -1,12 +1,13 @@
 package com.example.nicoletours.domain
 
+import android.net.Uri
 import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.data.network.PostVehicleService
 
-class postVehicleUseCase {
+class postVehicleUseCase() {
 
-    suspend fun postVehicle(result:VehicleModel){
-        PostVehicleService().createVehicle(result)
+    suspend fun registerVehicle(result:VehicleModel, img1: Uri, img2: Uri){
+        PostVehicleService().createVehicle(result, img1, img2)
     }
 
 }
