@@ -9,7 +9,6 @@ import com.example.nicoletours.data.model.VehicleModel
 class RecyclerAdapter(private val vehicleList:List<VehicleModel>, private val onClickListener:(VehicleModel)->Unit):RecyclerView.Adapter<RecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
-
         val layoutInflater = LayoutInflater.from(parent.context)
         return RecyclerViewHolder(layoutInflater.inflate(R.layout.item_vehicle, parent, false))
     }

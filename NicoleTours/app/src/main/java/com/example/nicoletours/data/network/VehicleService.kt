@@ -14,7 +14,7 @@ class VehicleService:VehicleRepo {
 
     override suspend fun getAllVehicle(): List<VehicleModel> {
         return  withContext(Dispatchers.IO) {
-            val list = ArrayList<VehicleModel>()
+            var list = ArrayList<VehicleModel>()
             val docref = db.collection("Vehicle")
             docref.addSnapshotListener{snapshot, e ->
                 if(e != null){

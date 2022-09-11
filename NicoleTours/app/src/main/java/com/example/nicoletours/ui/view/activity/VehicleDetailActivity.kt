@@ -1,9 +1,12 @@
 package com.example.nicoletours.ui.view.activity
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.nicoletours.R
@@ -11,6 +14,7 @@ import com.example.nicoletours.data.model.VehicleModel
 import com.example.nicoletours.databinding.ActivityVehicleDetailBinding
 import com.example.nicoletours.ui.view.fragment.DetailVehicleFragment
 import com.example.nicoletours.ui.view.fragment.ImagesFragment
+import com.example.nicoletours.ui.view.fragment.NewVehicleFragment
 import com.example.nicoletours.ui.viewModel.VehicleViewModel
 
 class VehicleDetailActivity() : AppCompatActivity() {
@@ -34,13 +38,37 @@ class VehicleDetailActivity() : AppCompatActivity() {
             removeFragment(fragmento)
             fragment = ImagesFragment()
             callFragmentImage(fragment, it)
+
+            binding.constrainBar.isGone = true
         })
+
+        binding.btnEdit.setOnClickListener{
+            val fragmento = supportFragmentManager.findFragmentById(R.id.fragmentDetail)!!
+            removeFragment(fragmento)
+            fragment = NewVehicleFragment()
+            callFragmentDetall(fragment)
+            binding.constrainBar.isGone = true
+
+            vehicleViewModel.postVehicleEdit(vehicle)
+        }
+
+        binding.btnDelete.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setMessage("Se eliminara permanentemente")
+            builder.setPositiveButton("Aceptar", DialogInterface.OnClickListener { d, i ->
+                vehicleViewModel.deleteVehicle(vehicle.plaque)
+                Toast.makeText(this, "Elimado", Toast.LENGTH_LONG).show()
+                super.onBackPressed()
+            })
+            builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener { d, i ->})
+            var dialog:AlertDialog = builder.create()
+            dialog.show()
+        }
     }
 
     private fun callFragmentImage(fragment: Fragment, listImg: ArrayList<String>?) {
         val fragmentTransactio = supportFragmentManager.beginTransaction()
         fragmentTransactio.add(R.id.fragmentDetail, fragment)
-        Toast.makeText(this, "PRUEBA LLAMADA", Toast.LENGTH_LONG).show()
 
         val bundle = Bundle()
         bundle.putStringArrayList("key", listImg)
@@ -61,12 +89,12 @@ class VehicleDetailActivity() : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(fragment is ImagesFragment) {
-            Toast.makeText(this, "SALIENDO", Toast.LENGTH_LONG).show()
+        if(fragment is ImagesFragment || fragment is NewVehicleFragment) {
             val fragmento = supportFragmentManager.findFragmentById(R.id.fragmentDetail)!!
             removeFragment(fragmento)
             fragment = DetailVehicleFragment()
             callFragmentDetall(fragment)
+            binding.constrainBar.isGone = false
         }else {
             super.onBackPressed()
         }

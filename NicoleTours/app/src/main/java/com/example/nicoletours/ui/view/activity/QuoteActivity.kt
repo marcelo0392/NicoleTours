@@ -22,11 +22,6 @@ class QuoteActivity : AppCompatActivity() {
 
         locationViewModel.onCreate()
         fragmentAdapter()
-
-        binding.buttonList.setOnClickListener {
-            val i = Intent(this, ListVehicleActivity::class.java)
-            startActivity(i)
-        }
     }
 
     private fun fragmentAdapter() {

@@ -10,8 +10,9 @@ import com.google.firebase.storage.StorageReference
 import kotlinx.coroutines.tasks.await
 
 class PostVehicleService{
-    suspend fun createVehicle(vehicle: VehicleModel, img1: Uri, img2: Uri) {
+    suspend fun createVehicle(vehicle: VehicleModel, img1: Uri, img2: Uri):Boolean {
 
+        var res:Boolean = true
         val folder: StorageReference = FirebaseStorage.getInstance().getReference().child("Vehicle")
 
         val fileName1: StorageReference = folder.child(vehicle.plaque).child(vehicle.plaque + "1")
@@ -30,5 +31,6 @@ class PostVehicleService{
                     .set(vehicle.toMap())
             }
         }.await()
+        return true
     }
 }

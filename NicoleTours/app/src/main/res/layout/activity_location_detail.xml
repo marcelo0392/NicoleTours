@@ -51,7 +51,7 @@
             android:text="Detalles"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:textStyle="bold"
+
             app:layout_constraintBottom_toBottomOf="@+id/imgBar"
             app:layout_constraintStart_toStartOf="@+id/imgBar"
             app:layout_constraintTop_toTopOf="@+id/imgBar" />
@@ -60,7 +60,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentDetail"
+        android:id="@+id/fragmentDetailLocation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

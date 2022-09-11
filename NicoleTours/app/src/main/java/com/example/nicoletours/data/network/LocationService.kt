@@ -24,7 +24,7 @@ class LocationService:LocationRepo {
                     if(snapshot != null){
                         for(doc in snapshot!!) {
                             list.add(doc.toObject<LocationModel>())
-                    }
+                        }
                     }
                 }
 //            }.await()

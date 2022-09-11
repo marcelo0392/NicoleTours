@@ -22,5 +22,10 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this, ListVehicleActivity::class.java)
             startActivity(i)
         }
+
+        binding.cardLocations.setOnClickListener {
+            val i = Intent(this, Activity_List_Locations::class.java)
+            startActivity(i)
+        }
     }
 }

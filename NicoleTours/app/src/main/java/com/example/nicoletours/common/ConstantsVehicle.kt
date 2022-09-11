@@ -1,10 +1,14 @@
 package com.example.nicoletours.common
 
 const val DRIVER_NAME = "name"
+const val DRIVER_LAST_NAME = "lastName"
+const val DRIVER_M_LAST_NAME = "mLastName"
 const val DRIVER_CI = "ci"
+const val DRIVER_DPTO = "dpto"
 const val DRIVER_CATEGORY = "category"
 const val DRIVER_RECORD = "record"
 const val VEHICLE_INSPECTION = "inspection"
+const val VEHICLE_NUM_INSPECTION = "numInspection"
 const val VEHICLE_RUAT = "ruat"
 const val VEHICLE_SOAT = "soat"
 const val VEHICLE_AGE = "age"

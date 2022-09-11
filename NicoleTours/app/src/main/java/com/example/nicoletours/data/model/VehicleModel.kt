@@ -6,10 +6,14 @@ import java.io.Serializable
 
 data class VehicleModel(
                     @SerializedName("name") val name:String="",             //nombre completo
-                    @SerializedName("ci") val ci:String="",                 //ci
+                    @SerializedName("lastName") val lastName:String="",
+                    @SerializedName("mLastName") val mLastName:String="",
+                    @SerializedName("ci") val ci:Int=0,                     //ci
+                    @SerializedName("dpto") val dpto:String="",
                     @SerializedName("category") val category:String="",     //categoria de licencia
                     @SerializedName("record") val record:String="",         //antecedentes
                     @SerializedName("inspection") val inspection:String="", //inspeccion tecnica
+                    @SerializedName("numInspection") val numInspection:Int=0,
                     @SerializedName("ruat") val ruat:String="",
                     @SerializedName("soat") val soat:String="",
                     @SerializedName("age") val age:Int=0,
@@ -32,10 +36,14 @@ data class VehicleModel(
 
 fun VehicleModel.toMap() = mapOf<String, Any>(
     DRIVER_NAME to name,
+    DRIVER_LAST_NAME to lastName,
+    DRIVER_M_LAST_NAME to mLastName,
     DRIVER_CI to ci,
+    DRIVER_DPTO to dpto,
     DRIVER_CATEGORY to category,
     DRIVER_RECORD to record,
     VEHICLE_INSPECTION to inspection,
+    VEHICLE_NUM_INSPECTION to numInspection,
     VEHICLE_RUAT to ruat,
     VEHICLE_SOAT to soat,
     VEHICLE_AGE to age,

@@ -50,36 +50,35 @@ class QuoteDetailFragment : Fragment() {
             val location = it
             lista.forEach {
                 if(it.location == location){
+                    binding.tvAtraction1.text = it.atraction1
+                    binding.tvAtraction2.text = it.atraction2
+                    binding.tvAtraction3.text = it.atraction3
+                    binding.tvAtraction4.text = it.atraction4
+                    binding.tvAtraction5.text = it.atraction5
+                    binding.tvAtraction6.text = it.atraction6
+                    binding.tvAtraction7.text = it.atraction7
+                    binding.tvAtraction8.text = it.atraction8
+                    binding.tvAtraction9.text = it.atraction9
+                    binding.tvAtraction10.text = it.atraction10
+                    binding.tvAtraction11.text = it.atraction11
+                    binding.tvAtraction12.text = it.atraction12
+                    binding.tvAtraction13.text = it.atraction13
+                    binding.tvAtraction14.text = it.atraction14
 
-                    if (it.atraction1 != null) binding.tvAtraction1.text = it.atraction1
-                    if (it.atraction2 != null) binding.tvAtraction2.text = it.atraction2
-                    if (it.atraction3 != null) binding.tvAtraction3.text = it.atraction3
-                    if (it.atraction4 != null) binding.tvAtraction4.text = it.atraction4
-                    if (it.atraction5 != null) binding.tvAtraction5.text = it.atraction5
-                    if (it.atraction6 != null) binding.tvAtraction6.text = it.atraction6
-                    if (it.atraction7 != null) binding.tvAtraction7.text = it.atraction7
-                    if (it.atraction8 != null) binding.tvAtraction8.text = it.atraction8
-                    if (it.atraction9 != null) binding.tvAtraction9.text = it.atraction9
-                    if (it.atraction10 != null) binding.tvAtraction10.text = it.atraction10
-                    if (it.atraction11 != null) binding.tvAtraction11.text = it.atraction11
-                    if (it.atraction12 != null) binding.tvAtraction12.text = it.atraction12
-                    if (it.atraction13 != null) binding.tvAtraction13.text = it.atraction13
-                    if (it.atraction14 != null) binding.tvAtraction14.text = it.atraction14
-
-                    if (it.costAtraction1 != null) binding.tvCost1.text = it.costAtraction1.toString()
-                    if (it.costAtraction2 != null) binding.tvCost2.text = it.costAtraction2.toString()
-                    if (it.costAtraction3 != null) binding.tvCost3.text = it.costAtraction3.toString()
-                    if (it.costAtraction4 != null) binding.tvCost4.text = it.costAtraction4.toString()
-                    if (it.costAtraction5 != null) binding.tvCost5.text = it.costAtraction5.toString()
-                    if (it.costAtraction6 != null) binding.tvCost6.text = it.costAtraction6.toString()
-                    if (it.costAtraction7 != null) binding.tvCost7.text = it.costAtraction7.toString()
-                    if (it.costAtraction8 != null) binding.tvCost8.text = it.costAtraction8.toString()
-                    if (it.costAtraction9 != null) binding.tvCost9.text = it.costAtraction9.toString()
-                    if (it.costAtraction10 != null) binding.tvCost10.text = it.costAtraction10.toString()
-                    if (it.costAtraction11 != null) binding.tvCost11.text = it.costAtraction11.toString()
-                    if (it.costAtraction12 != null) binding.tvCost12.text = it.costAtraction12.toString()
-                    if (it.costAtraction13 != null) binding.tvCost13.text = it.costAtraction13.toString()
-                    if (it.costAtraction14 != null) binding.tvCost14.text = it.costAtraction14.toString()
+                    if (it.costAtraction1 != 0) binding.tvCost1.text = it.costAtraction1.toString()
+                    if (it.costAtraction2 != 0) binding.tvCost2.text = it.costAtraction2.toString()
+                    if (it.costAtraction3 != 0) binding.tvCost3.text = it.costAtraction3.toString()
+                    if (it.costAtraction4 != 0) binding.tvCost4.text = it.costAtraction4.toString()
+                    if (it.costAtraction5 != 0) binding.tvCost5.text = it.costAtraction5.toString()
+                    if (it.costAtraction6 != 0) binding.tvCost6.text = it.costAtraction6.toString()
+                    if (it.costAtraction7 != 0) binding.tvCost7.text = it.costAtraction7.toString()
+                    if (it.costAtraction8 != 0) binding.tvCost8.text = it.costAtraction8.toString()
+                    if (it.costAtraction9 != 0) binding.tvCost9.text = it.costAtraction9.toString()
+                    if (it.costAtraction10 != 0) binding.tvCost10.text = it.costAtraction10.toString()
+                    if (it.costAtraction11 != 0) binding.tvCost11.text = it.costAtraction11.toString()
+                    if (it.costAtraction12 != 0) binding.tvCost12.text = it.costAtraction12.toString()
+                    if (it.costAtraction13 != 0) binding.tvCost13.text = it.costAtraction13.toString()
+                    if (it.costAtraction14 != 0) binding.tvCost14.text = it.costAtraction14.toString()
                 }
             }
         })
